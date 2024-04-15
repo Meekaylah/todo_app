@@ -15,4 +15,4 @@ let currentTask = {};
 
 openTaskFormBtn.addEventListener("click", () => {
     taskForm.classList.toggle("hidden")
-})
+ })
