@@ -13,23 +13,29 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
-openTaskFormBtn.addEventListener("click", () => {
-    taskForm.classList.toggle("hidden")
-})
+openTaskFormBtn.addEventListener("click", () =>
+  taskForm.classList.toggle("hidden")
+);
 
 closeTaskFormBtn.addEventListener("click", () => {
-    confirmCloseDialog.showModal();
-})
+  confirmCloseDialog.showModal();
+});
 
-cancelBtn.addEventListener('click', () => {
-    confirmCloseDialog.close();
-})
+cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
 
-discardBtn.addEventListener('click', () => {
-    confirmCloseDialog.close();
-    taskForm.classList.toggle('hidden');
-})
+discardBtn.addEventListener("click", () => {
+  confirmCloseDialog.close();
+  taskForm.classList.toggle("hidden");
+});
+
 
 taskForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+  e.preventDefault();
+
+  const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
+  const taskObj = {
+    id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
+    
+  };
+  console.log(taskObj);
 });
