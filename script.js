@@ -65,6 +65,5 @@ taskForm.addEventListener("submit", (e) => {
       `)
     }
   );
-
   reset()
 });
