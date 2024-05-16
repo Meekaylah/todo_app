@@ -43,7 +43,7 @@ const updateTaskContainer = () => {
           <p><strong>Date:</strong> ${date}</p>
           <p><strong>Description:</strong> ${description}</p>
           <button onclick="editTask(this)" type="button" class="btn">Edit</button>
-          <button onclick="deleteTask(this)" type="button" class="btn">Delete</button> 
+          <button onclick="deleteTask(this)" type="button" class="btn">Delete</button>
         </div>
       `)
     }
@@ -73,7 +73,7 @@ const editTask = (buttonEl) => {
 
   addOrUpdateTaskBtn.innerText = "Update Task";
 
-  taskForm.classList.toggle("hidden");  
+  taskForm.classList.toggle("hidden");
 }
 
 const reset = () => {
@@ -112,18 +112,3 @@ taskForm.addEventListener("submit", (e) => {
   addOrUpdateTask();
 });
 
-const myTaskArr = [
-  { task: "Walk the Dog", date: "22-04-2022" },
-  { task: "Read some books", date: "02-11-2023" },
-  { task: "Watch football", date: "10-08-2021" },
-];
-
-localStorage.setItem("data", JSON.stringify(myTaskArr));
-
-localStorage.clear()
-
-const getTaskArr = localStorage.getItem("data")
-console.log(getTaskArr)
-
-const getTaskArrObj = JSON.parse(localStorage.getItem("data"));
-console.log(getTaskArrObj);
