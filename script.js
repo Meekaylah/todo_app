@@ -79,6 +79,7 @@ const editTask = (buttonEl) => {
 }
 
 const reset = () => {
+addOrUpdateTaskBtn.innerText = "Add Task"
   titleInput.value = "";
   dateInput.value = "";
   descriptionInput.value = "";
@@ -86,8 +87,8 @@ const reset = () => {
   currentTask = {};
 }
 
-if (taskData.length){
-  updateTaskContainer()
+if (taskData.length) {
+  updateTaskContainer();
 }
 
 openTaskFormBtn.addEventListener("click", () =>
